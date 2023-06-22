@@ -1,0 +1,84 @@
+.top-componente{
+    display: flex;
+    margin-top: 3rem;
+}
+
+
+.borde{
+    margin: 2em;
+    border: solid 1px rgb(138, 135, 135);
+}
+
+.descripcion-producto{
+    font-size: 1.2rem;
+}
+
+
+@keyframes backgroundChange {
+    0% { background-color: #ff0000af;}
+    100% {background-color: #E2CBB4;}
+}
+
+h2{
+    font-weight: 700;
+    padding: 0.3rem;
+    margin-left: auto;
+    color: rgb(0, 0, 0);
+    animation: backgroundChange 1.5s infinite;
+    border: solid 1px rgb(117, 0, 0);
+    border-radius: 10rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    color: black;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.carousel-indicators .active {
+    background-color: black;
+}  
+
+
+.precio-menor{
+    font-weight: 600;
+    color: black;
+}
+
+.precio-mayor{
+    margin-left: 2rem;
+    margin-right: 1rem;
+    font-weight: 400;
+    color: rgb(102, 100, 100);
+}
+
+.nombre-producto{
+    margin-right: 2rem;
+}
+
+.imagen-fija {
+    width: 30rem;
+    height: 24rem;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10%;
+}
+
+/*css para el modal*/
+.modal{
+    background-image: radial-gradient(circle, #f3dbc34b, #ebd3bc53, #e3ccb550, #dcc4ae55, #d4bda750);
+}
+
+.modal-body, .modal-header, .modal-footer{
+    border-color: #827f7f;
+    background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);
+}
+/**/

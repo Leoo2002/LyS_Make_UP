@@ -1,0 +1,81 @@
+<div>
+    <div class="row" style="margin: 1rem;">
+        <h4 class="subtitulos">Ofertas Limitadas</h4>
+
+        <div class="align-items-center justify-content-center" style="display: flex; flex-wrap: wrap;">
+            <ng-container *ngFor="let index of getRange(4)">
+                <div class="card" style="margin: 1rem; width: 18rem; background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);">
+                    <img src="http://192.168.0.45:8080/img/baseTejar.jpg" class="card-img-top margin-top: 2rem;" alt="">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h5>Base Tejar</h5>
+                            <h2>20% OFF</h2>
+                        </div>
+                        <br>
+                        <p class="card-text">Precio:</p>
+                        <ul>
+                            <li>Minorista: $500</li>
+                            <li>Mayorista: $400</li>
+                        </ul>
+                        <a href="#" class="btn boton">Agregar al carrito</a>
+                        <a [routerLink]="['/detalleProducto']" class="btn boton">Ver Detalles</a>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="row" style="margin: 1rem;">
+        <h4 class="subtitulos">Productos Destacados</h4>
+
+        <div class="align-items-center justify-content-center" style="display: flex; flex-wrap: wrap;">
+            <ng-container *ngFor="let index of getRange(4)">
+                <div class="card" style="margin: 1rem; width: 18rem; background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);">
+                    <img src="http://192.168.0.45:8080/img/baseTejar.jpg" class="card-img-top margin-top: 2rem;" alt="">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h5>Base Tejar</h5>
+                            <h2>20% OFF</h2>
+                        </div>
+                        <br>
+                        <p class="card-text">Precio:</p>
+                        <ul>
+                            <li>Minorista: $500</li>
+                            <li>Mayorista: $400</li>
+                        </ul>
+                        <a href="#" class="btn boton">Agregar al carrito</a>
+                        <a [routerLink]="['/detalleProducto']" class="btn boton">Ver Detalles</a>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+
+
+    <div class="row" style="margin: 1rem;">
+        <h4 class="subtitulos">Especiales</h4>
+
+        <div class="align-items-center justify-content-center" style="display: flex; flex-wrap: wrap;">
+            <ng-container *ngFor="let index of getRange(4)">
+                <div class="card" style="margin: 1rem; width: 18rem; background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);">
+                    <img src="http://192.168.0.45:8080/img/baseTejar.jpg" class="card-img-top margin-top: 2rem;" alt="">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h5>Base Tejar</h5>
+                            <h2>20% OFF</h2>
+                        </div>
+                        <br>
+                        <p class="card-text">Precio:</p>
+                        <ul>
+                            <li>Minorista: $500</li>
+                            <li>Mayorista: $400</li>
+                        </ul>
+                        <a href="#" class="btn boton">Agregar al carrito</a>
+                        <a [routerLink]="['/detalleProducto']" class="btn boton">Ver Detalles</a>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

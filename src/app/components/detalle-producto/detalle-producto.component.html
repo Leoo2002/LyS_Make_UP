@@ -1,0 +1,121 @@
+
+<div class="top-componente">
+    <div class="row" style="align-items: center;">
+        
+        <div class="col borde col-lg-4 col-xl-5 col-md-12 col-sm-12">
+
+
+            <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li [ngClass]="{'active': i === 0}" *ngFor="let img of mostrarProducto.imagenes; let i = index" data-bs-target="#carrusel" [attr.data-bs-slide-to]="i"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item" [ngClass]="{'active': i === 0}" *ngFor="let img of mostrarProducto.imagenes; let i = index">
+                        <img src="{{img}}" class="card-img-top imagen-fija">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        
+        
+
+        <div class="col ">
+            <div class="row">
+                <div class="col" style="padding: 1rem;">
+
+                    <div class="d-flex align-items-center" >
+                        <h1 class="nombre-producto fs-1">{{mostrarProducto.nombre}}</h1>    
+                        <span class="precio-menor fs-3"> ${{mostrarProducto.precioMenor}} </span>
+                        <span class="precio-mayor fs-3">Mayorista: ${{mostrarProducto.precioMayor}}</span>
+                        <h2 style="margin-right: 2rem;" *ngIf="mostrarProducto.conDescuento">{{mostrarProducto.descuento}}% OFF</h2>                        
+                    </div>
+                    <p class="descripcion-producto">
+                        {{mostrarProducto.descripcion}}
+                    </p>
+                </div>
+                <div class="row">
+
+
+                    <div class="row fila-opciones-cantidad">
+                        <div class="col">
+                            <select class="form-select me-3" name="select" [(ngModel)]="opcionSeleccionada">
+                                <option *ngFor="let variante of mostrarProducto.variantes">{{variante}}</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="number" id="tentacles" name="tentacles" class="form-control me-3" min="1" max="200" value="1" [(ngModel)]="cantidadSeleccionada">
+                        </div>
+                    </div>
+                    
+                    <div class="row" style="margin-top: 2rem;">
+                        <button type="button" class="btn btn-success" data-bs-target="#mensajeAgregado" data-bs-toggle="modal" (click)="agregarAlCarrito(mostrarProducto, opcionSeleccionada, cantidadSeleccionada)">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mensajeAgregado" aria-hidden="true" aria-labelledby="mensajeAgregadoLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col col-lg-9">
+                        <h1 *ngIf="error" class="modal-title fs-6" id="mensajeAgregadoLabel2"><i class="bi bi-exclamation-octagon-fill"></i> Debe seleccionar una opcion y una cantidad positiva</h1>
+                        <h1 *ngIf="!error" class="modal-title fs-5" id="mensajeAgregadoLabel2">Producto agregado <i class="bi bi-cart-check-fill"></i></h1>
+                    </div>
+                    <div class="col col-lg-3">
+                        <button *ngIf="error" class="btn btn-info" data-bs-dismiss="modal">Aceptar</button>
+                        <button *ngIf="!error" class="btn btn-info" data-bs-dismiss="modal" (click)="redireccionarAProductos()" >Aceptar</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br>
+<!--cambiar por array en Producto con los codigos de los productos a recomendar
+<div style="margin-left: 3rem;">
+    <h3 style="border-bottom: solid 2px grey;">Articulos Relacionados</h3>
+    <div class="col-lg-12 col-xl-9" style="display: flex; flex-wrap: wrap;">
+        <div class="align-items-center justify-content-center" style="display: flex; flex-wrap: wrap;">
+        <ng-container *ngFor="let index of getRange(3)">
+            <div class="card" style="margin: 1rem; width: 18rem; background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);">
+                <img src="http://localhost:8080/img/baseTejar.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h5>Base Tejar</h5>
+                        <h2>20% OFF</h2>
+                    </div>
+                    <br>
+                    <p class="card-text">Precio:</p>
+                    <ul>
+                        <li>Minorista: $500</li>
+                        <li>Mayorista: $400</li>
+                    </ul>
+                    <a href="#" class="btn boton">Agregar al carrito</a>
+                    <a [routerLink]="['/detalleProducto']" class="btn boton">Ver Detalles</a>
+                </div>
+            </div>
+        </ng-container>
+        </div>
+    </div>
+</div>
+
+-->

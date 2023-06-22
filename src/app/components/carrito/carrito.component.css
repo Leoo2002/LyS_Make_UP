@@ -1,0 +1,66 @@
+
+.table img {
+    width: 100px;
+}
+.table *{
+    text-align: center;
+}
+
+.total{
+    font-weight: bold;
+}
+.descuento{
+    color: rgb(181, 39, 39);
+}
+.info-descuentos{
+    text-align: center;
+    margin: 2rem;
+    border: solid 1px;
+    border-radius: 50px;
+}
+
+
+.tabla-detalles td{
+    margin: 500px;
+}
+
+.botones{
+    text-align: center;
+}
+.botones button{
+    margin: 1rem;
+}
+
+
+.info-fin{
+    margin: 2rem;
+}
+
+
+.cuadro{
+    margin: 2rem;
+}
+
+
+
+.alerta-sin-productos{
+    text-align: center;
+    margin: 2rem;
+}
+.btn-ver-productos{
+    margin-left: 1rem;
+}
+
+
+
+
+
+
+.modal{
+    background-image: radial-gradient(circle, #f3dbc34b, #ebd3bc53, #e3ccb550, #dcc4ae55, #d4bda750);
+}
+
+.modal-body, .modal-header, .modal-footer{
+    border-color: #827f7f;
+    background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);
+}

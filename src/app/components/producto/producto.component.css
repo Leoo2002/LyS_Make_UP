@@ -1,0 +1,105 @@
+
+@keyframes backgroundChange {
+    0% { background-color: #ff0000af;}
+    100% {background-color: #E2CBB4;}
+}
+
+
+/*boton ver detalles del model que lleva al componente descripcion del producto*/
+.boton-detalles{
+    background-color: rgb(181, 181, 181);
+    border: 1px solid rgb(118, 118, 118);
+}
+
+.card {
+    margin: 1rem;
+    width: 16rem;
+    height: 28rem;
+    border-radius: 5%;
+    background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.imagen-card {
+    width: 16rem;
+    height: 16rem;
+    object-fit: contain;
+    object-position: center;
+    padding: 1rem;
+    border-radius: 10%;
+}
+
+.boton {
+    align-self: flex-end;
+    background-color: #5dc1b9;
+    border: solid 0.2px #30645f;
+    margin-top: auto; /* Cambiado de 'margin-bottom' a 'margin-top' */
+}
+
+.titulo-card{
+    font-weight: 500;
+}
+
+.card-title{
+    font-weight: 500;
+    border-bottom: solid 1px rgb(115, 114, 114);
+    display: flex;
+    align-items: center;
+}
+
+.descuento{
+    text-align: center;
+    font-weight: 600;
+    padding: 0.3rem;
+    margin-bottom: 0.2rem;
+    margin-left: auto;
+    color: rgb(0, 0, 0);
+    animation: backgroundChange 1.5s infinite;
+    border: solid 1px rgb(117, 0, 0);
+    border-radius: 10rem;
+}
+
+
+.precios-ventana-emergente{
+    margin-left: auto;
+}
+
+.precio-menor{
+    font-weight: 600;
+    color: black;
+}
+
+.precio-mayor{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-weight: 400;
+    color: rgb(102, 100, 100);
+}
+
+.fila-opciones-cantidad{
+    margin-top: 1rem;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgb(158, 155, 155);
+}
+
+.imagen-fija {
+    width: 25rem;
+    height: 24rem;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10%;
+}
+
+.modal{
+    background-image: radial-gradient(circle, #f3dbc34b, #ebd3bc53, #e3ccb550, #dcc4ae55, #d4bda750);
+}
+
+.modal-body, .modal-header, .modal-footer{
+    border-color: #827f7f;
+    background-image: radial-gradient(circle, #f3dbc3, #ebd3bc, #e3ccb5, #dcc4ae, #d4bda7);
+}

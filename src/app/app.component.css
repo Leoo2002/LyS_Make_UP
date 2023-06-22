@@ -1,0 +1,142 @@
+
+body {
+    margin: 0;
+}
+
+.menu-navegacion{
+    background-image: radial-gradient(circle, #5dc1b9, #54b4ac, #4ba7a0, #429a93, #398e87);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; 
+}
+
+.navbar-nav > li:hover{
+    background-color: #83396C;
+}
+
+.color_navbar_tiulo_icono{
+    color:black;
+}
+
+.color_navbar{
+    color: antiquewhite;
+}
+/**/
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; 
+}
+
+.navbar-nav > li:hover{
+    background-color: #83396C;
+}
+
+.navbar-nav-filtros > li:hover {
+    background-color: #5DC1B9;
+}
+
+.sub-opciones-filtros{
+    padding-left: 1em;
+
+}
+
+.menu-filtros *{
+    color: black;
+}
+
+h4 {
+    border-bottom: 1px solid rgb(216, 207, 207);
+}
+
+.btn-filtro {
+    background-color: #2e6662;
+    border: solid 1px black;
+}
+
+a{
+    font-size: 15px;
+}
+h4{
+    font-size: 20px;
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.pie-de-pagina{
+    background-color: #5dc1b9;
+}
+
+.links a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.pie-de-pagina{
+    margin-top: 3rem ;
+    background-image: radial-gradient(circle, #5dc1b9, #54b4ac, #4ba7a0, #429a93, #398e87);
+}
+
+.icon-pie-de-pagina i{
+    color: white;
+}
+
+
+
+/* Botón ir arriba */
+
+.ir-arriba-div {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+
+.ir-arriba-btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ir-arriba-btn i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 1.7rem;
+    color: #fff;
+    transition: transform 0.5s;
+}
+
+.ir-arriba-div.mostrar {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear, opacity 0.5s;
+}
+
+.ir-arriba-div.mostrar .ir-arriba-btn i {
+    transform: translate(-50%, -50%) scale(1);
+}

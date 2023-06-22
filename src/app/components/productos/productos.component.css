@@ -1,0 +1,62 @@
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; 
+}
+
+.navbar-nav > li:hover{
+    background-color: #83396C;
+}
+/**/
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; 
+}
+
+
+.navbar-nav-filtros > li:hover {
+    background-color: #5DC1B9;
+}
+
+.sub-opciones-filtros{
+    padding-left: 1em;
+
+}
+
+.menu-filtros *{
+    color: black;
+}
+
+h4 {
+    border-bottom: 1px solid rgb(216, 207, 207);
+}
+
+.btn-filtro {
+    width: 100%;
+    background-color: #5DC1B9;
+    border: solid 1px #2a3e44;
+}
+
+a{
+    font-size: 15px;
+}
+h4{
+    font-size: 20px;
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+

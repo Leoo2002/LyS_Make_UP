@@ -1,0 +1,103 @@
+
+
+<div class="alert alert-info info-descuentos" role="alert">
+    <strong>El precio mayorista se aplica automaticamente pasando los $5.000.</strong>
+    <br>
+    Los descuentos son: <br>
+        $50.000 <i class="bi bi-arrow-right-short"></i> 5% <br>
+        $150.000 <i class="bi bi-arrow-right-short"></i> 10% <br>
+        $250.000 <i class="bi bi-arrow-right-short"></i> 15%
+</div>
+
+
+<span *ngIf="carritoObtenido.length > 0">
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Opcion</th>
+                <th scope="col">Precio Unidad</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Total x Fila</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let producto of carritoObtenido">
+                <tr>
+                    <td><img [src]="producto.imagen" class="card-img-top"></td>
+                    <td>#{{producto.id}}</td>
+                    <td> {{producto.nombre}}</td>
+                    <td>{{producto.variante}}</td>
+                    <td *ngIf="!mayor">${{producto.precioMenor}}</td>
+                    <td *ngIf="mayor">${{producto.precioMayor}}</td>
+                    <td> <input type="number" id="cant-producto" name="cant-producto" class="form-control" min="1" max="2000" [(ngModel)]="producto.cantidad" (ngModelChange)="actualizaDatos()"> </td>
+                    <td *ngIf="!mayor">${{producto.subtotalProductoMenor}}</td>
+                    <td *ngIf="mayor">${{producto.subtotalProductoMayor}}</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger" (click)="productoEliminar(producto)" data-bs-target="#eliminarProducto" data-bs-toggle="modal"><i class="bi bi-trash"></i> </button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <div class="row d-flex align-items-stretch">
+        <div class="col-lg-6 col-sm-12 mx-auto cuadro">
+            <div class="form-floating mb-3 h-100">
+                <input type="text" class="form-control h-100" id="floatingInput">
+                <label for="floatingInput" class="h-100">Consideraciones a tener en cuenta:</label>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12 mx-auto">
+            <ul class="list-group h-100">
+                <li class="list-group-item">Cantidad de productos: {{cantidadProductos}}</li>
+                <li *ngIf="!mayor" class="list-group-item">SubTotal: ${{subtotalMenor}}</li>
+                <li *ngIf="mayor" class="list-group-item">SubTotal: ${{subtotalMayor}}</li>
+                <li *ngIf="subtotalMayor>50000" class="list-group-item fw-semibold descuento">Descuento aplicado: -{{descuento}}%</li>
+                <li class="list-group-item total">Total: ${{total}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="botones">
+    <button type="button" class="btn btn-secondary" [routerLink]="['/productos']">Seguir Comprando</button>
+    <button type="button" class="btn btn-success" [routerLink]="['/final-compra']">Finalizar Compra</button>
+</div>
+</span>
+
+<span *ngIf="carritoObtenido.length == 0">
+    <div class="alert alert-warning  alerta-sin-productos" role="alert">Todavia no hay productos en el carrito. Por que no hechamos un vistazo? 
+        <button type="button" class="btn btn-success btn-ver-productos" [routerLink]="['/productos']"><i class="bi bi-eye-fill"></i>  Ver Todos Los Productos</button>
+    </div>
+</span>
+
+<div class="alert alert-secondary info-fin" role="alert">Al finalizar el pedido deberá contactarse por WhatsApp para acordar el envío/retiro y forma de pago.</div>
+
+
+
+
+<div class="modal fade" id="eliminarProducto" aria-hidden="true" aria-labelledby="eliminarProductoLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            
+            <div class="modal-body">
+                <h1 class="modal-title fs-5" id="eliminarProductoLabel2">Se quitara el producto del carrito de compras <i class="bi bi-cart-x-fill"></i></h1>               
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-info" data-bs-dismiss="modal" (click)="eliminarArticulo()">Aceptar</button>
+            </div>
+
+        </div>
+    </div>
+</div>

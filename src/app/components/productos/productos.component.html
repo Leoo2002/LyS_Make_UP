@@ -1,0 +1,59 @@
+<!-- NAVBAR DE FILTROS-->
+
+<div class="container-fluid">
+
+    <!--Fila 1-->
+
+    <div class="row">
+
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xl-3" >
+                
+            <!--Navbar Filtros-->
+
+            <nav class="nav navbar flex-column navbar-expand-xl navbar-dark menu-filtros " style="margin-top: 1rem; border-right: 1px solid rgb(230, 225, 225);">
+                <div class="container-fluid">
+                    
+                    <button class="navbar-toggler btn-filtro" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuFiltros">
+                        Filtros
+                    </button>
+
+                    <section class="offcanvas offcanvas-end menu-filtros" id="menuFiltros" tapindex="-1">
+                        <div class="offcanvas-header" data-bs-theme="dark">
+                            <h5 class="offcanvas-title color_navbar_tiulo_icono">Filtros</h5>
+                            <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas"></button>
+                        </div>
+                        <!--Opciones-->
+                        <div class="offcanvas-body d-flex flex-column justify-content-between px-0" >
+                            <ul>
+                                <h4>Categorias:</h4>
+                                <ul class="navbar-nav navbar-nav-filtros fs-5 flex-column">
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar"> Maquillaje</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar"> Colitas</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar"> Acero</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar"> Invierno</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar"> Limpieza Facial</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar"> Esmaltes Semipermanentes</a></li>
+                                </ul>
+                            </ul>
+                            <ul>
+                                <h4>Marcas:</h4>
+                                <ul class="navbar-nav navbar-nav-filtros fs-5 flex-column">
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar">Tejar</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar">City Girl</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar">Paris Nigth</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar">Pink 21</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar">Charmlimit</a></li>
+                                    <li class="sub-opciones-filtros"><a href="" class="nav-link color_navbar">Otros</a></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </nav>
+        </div>
+
+        <div class="col-lg-12 col-xl-9" style="display: flex; flex-wrap: wrap;">
+            <app-producto></app-producto>
+        </div>
+    </div>
+</div>   
